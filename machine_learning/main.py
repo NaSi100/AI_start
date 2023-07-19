@@ -30,7 +30,7 @@ def dict_demo():
     """
     data = [{'city': '北京', 'temperature': 100}, {'city': '上海', 'temperature': 60},
             {'city': '深圳', 'temperature': 30}]
-    # 1.实例化一个转换器类
+    # 分支定界.py.实例化一个转换器类
     # separator稀疏矩阵(将非零值按位置表示)
     transfer = DictVectorizer(sparse=False)
     # 2.调用fit_transform()
@@ -47,7 +47,7 @@ def count_demo():
     :return:
     """
     data = ["life is short,i like like python", "life is too long,i dislike python"]
-    # 1.实例化一个转换器类
+    # 分支定界.py.实例化一个转换器类
     # stop_words停用词
     transfer = CountVectorizer()
     # 2、调用fit_transform
@@ -72,7 +72,7 @@ def count_chinese_demo():
     for sent in data:
         data_new.append(" ".join(list(jieba.cut(sent))))  # 将sent列表用“ ”连接起来
     # print(data_new)
-    # 1、实例化一个转换器类
+    # 分支定界.py、实例化一个转换器类
     transfer = CountVectorizer(stop_words=["一种", "所以"])
 
     # 2、调用fit_transform
@@ -97,7 +97,7 @@ def tfidf_demo():
     for sent in data:
         data_new.append(" ".join(list(jieba.cut(sent))))
     # print(data_new)
-    # 1、实例化一个转换器类
+    # 分支定界.py、实例化一个转换器类
     transfer = TfidfVectorizer(stop_words=["一种", "所以"])
 
     # 2、调用fit_transform
